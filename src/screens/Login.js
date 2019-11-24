@@ -18,7 +18,7 @@ export default class Login extends Component {
   async componentDidMount(){
     GoogleSignin.configure({
       scopes: ['https://www.googleapis.com/auth/userinfo.profile'],
-      webClientId: '152894186121-60j8unlm2t3gchad1249p0dkncv5h807.apps.googleusercontent.com', 
+      webClientId: '152894186121-jse8c7d150f84l1khvhlsj478ukfl130.apps.googleusercontent.com', 
       offlineAccess: false,
       forceConsentPrompt: true
     });
