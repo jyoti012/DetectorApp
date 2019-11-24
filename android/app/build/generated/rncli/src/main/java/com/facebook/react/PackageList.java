@@ -16,6 +16,8 @@ import com.ajackus.detectpothole.R;
 
 // @react-native-community/google-signin
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
+// react-native-camera
+import org.reactnative.camera.RNCameraPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 // react-native-reanimated
@@ -68,6 +70,7 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new RNGoogleSigninPackage(),
+      new RNCameraPackage(),
       new RNGestureHandlerPackage(),
       new ReanimatedPackage(),
       new RNScreensPackage()

@@ -14,6 +14,7 @@
     "axios-observable": "^1.1.2",
     "react": "16.8.1",
     "react-native": "0.61.3",
+    "react-native-camera": "^3.11.1",
     "react-native-gesture-handler": "^1.5.1",
     "react-native-reanimated": "^1.4.0",
     "react-native-screens": "^1.0.0-alpha.23",
