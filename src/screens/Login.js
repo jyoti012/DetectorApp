@@ -2,20 +2,20 @@ import React, { Component } from "react";
 import {
   View,
   Text,
-  KeyboardAvoidingView,
   ScrollView,
   StyleSheet,
   SafeAreaView,
-  Button
 } from "react-native";
 
-import InputField from "../components/form/InputField";
 import { GoogleSignin, GoogleSigninButton, statusCodes } from '@react-native-community/google-signin';
 import Api from '../services/Api';
 
-export default class Login extends Component {
+class LoginScreen extends Component {
+  static navigationOptions = {
+    header: null
+  }
 
-  async componentDidMount(){
+  async componentDidMount() {
     GoogleSignin.configure({
       scopes: ['https://www.googleapis.com/auth/userinfo.profile'],
       webClientId: '152894186121-jse8c7d150f84l1khvhlsj478ukfl130.apps.googleusercontent.com', 
@@ -25,43 +25,17 @@ export default class Login extends Component {
   }
 
   render() {
-    // console.log("This");
-    // console.log(this.signIn);
     return (
     <SafeAreaView style={styles.container}>
         <View style={styles.wrapper}>
             <View style={styles.scrollViewWrapper}>
                 <ScrollView style={styles.scrollView}>
-                <Text style={styles.loginHeader}>Login to MyApp</Text>
+                <Text style={styles.loginHeader}>Login</Text>
                     <GoogleSigninButton
                       style={styles.googleSignInButton}
                       size={GoogleSigninButton.Size.Wide}
                       color={GoogleSigninButton.Color.Light}
                       onPress={this.signIn}
-                    />
-                    <Text style={styles.orText}>- or -</Text>
-                    <InputField 
-                      labelTextSize={14} 
-                      labelColor={'#000'} 
-                      textColor={'#000'} 
-                      borderBottomColor={'#ccc'} 
-                      inputType="email" 
-                      customStyle={{marginBottom:10}} 
-                      placeholder = "Your Email Address"    
-                    />
-                    <InputField 
-                      labelTextSize={14} 
-                      labelColor={'#000'} 
-                      textColor={'#000'} 
-                      borderBottomColor={'#ccc'} 
-                      inputType="password"  
-                      placeholder="Password"
-                      customStyle={{marginBottom:30}}
-                    />
-                    <Button
-                      style={styles.signInButton}
-                      title="Sign In"
-                      onPress={() => alert('Simple Button pressed')}
                     />
                 </ScrollView>
                 </View>
@@ -74,14 +48,17 @@ export default class Login extends Component {
     try {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
-      console.log(userInfo);
-      Api.checkUser({
-        email : userInfo.user.email
-      }).subscribe((response)=>{
-        console.log(response);
-      },(error)=>{
-        // console.log(error);
-      }) 
+      console.log('Details', userInfo);
+      // Api.checkUser({
+      //   email : userInfo.user.email
+      // }).subscribe((response)=>{
+      //   console.log(response);
+        if (userInfo.length) {
+
+        }
+      // },(error)=>{
+      //   // console.log(error);
+      // }) 
       // alert(userInfo);
       this.setState({ userInfo });
     } catch (error) {
@@ -147,4 +124,5 @@ const styles = StyleSheet.create({
       textAlign: 'center'
     }
 });
-  
+
+export default LoginScreen;
