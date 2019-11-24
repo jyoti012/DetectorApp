@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "152894186121",
+    "firebase_url": "https://test-app-1f2d5.firebaseio.com",
+    "project_id": "test-app-1f2d5",
+    "storage_bucket": "test-app-1f2d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:152894186121:android:9f090508c5ff0563e65c58",
+        "android_client_info": {
+          "package_name": "com.ajackus.detectpothole"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "152894186121-60j8unlm2t3gchad1249p0dkncv5h807.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ajackus.detectpothole",
+            "certificate_hash": "f4ee2b0e38224dbb641693944851ef50a369672a"
+          }
+        },
+        {
+          "client_id": "152894186121-jse8c7d150f84l1khvhlsj478ukfl130.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc9ls045AWe-9maw8xqNmNrQFOca5opYs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "152894186121-jse8c7d150f84l1khvhlsj478ukfl130.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
